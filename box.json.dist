@@ -1,0 +1,31 @@
+{
+    "alias": "textwheel.phar",
+    "main": "bin/textwheel",
+    "output": "textwheel.phar",
+    "stub": true,
+    "directories": [ "src", "bin" ],
+    "files": [
+        "LICENSE"
+    ],
+    "finder": [{
+        "name": "*.php",
+        "in": "vendor",
+        "exclude": [
+            "phpunit",
+            "phpdocumentor",
+            "sebastian",
+            "phpspec",
+            "doctrine",
+            "test",
+            "tests",
+            "Tests"
+        ]
+    }],
+    "compression" : "GZ",
+    "compactors": [
+        "Herrera\\Box\\Compactor\\Json",
+        "Herrera\\Box\\Compactor\\Php"
+    ],
+    "chmod": "0755",
+    "algorithm": "SHA1"
+}
